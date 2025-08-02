@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini site vidéo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Luffy VS Kaido </h1>
+
+  <div class="video-container">
+    <div class="video-thumb" onclick="ouvrirVideo('videos/lufy-vs-kaido-partie-1.mp4')">
+      <img src="mini/mini1.png" alt="Vidéo 1">
+      <p>▶ Luffy vs Kaido Partie 1</p>
+    </div>
+
+    <div class="video-thumb" onclick="ouvrirVideo('videos/lufy-vs-kaido-partie-2.mp4')">
+      <img src="mini/mini2.png" alt="Vidéo 2">
+      <p>▶ Luffy vs Kaido Partie 2</p>
+    </div>
+  </div>
+
+  <!-- Fenêtre modale pour lire la vidéo -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fermerVideo()">&times;</span>
+      <video id="lecteur" controls autoplay>
+        <source id="source-video" src="" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo HTML5.
+      </video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
