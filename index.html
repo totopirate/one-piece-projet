@@ -2,36 +2,193 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mini site vidéo</title>
+  <title>Luffy VS Kaido</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #313030;
+      color: rgb(233, 222, 222);
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      margin-left: 20px;
+    }
+
+    .video-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .video-thumb {
+      width: 300px;
+      cursor: pointer;
+    }
+
+    .video-thumb img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(235, 232, 232, 0.2);
+      transition: transform 0.2s;
+    }
+
+    .video-thumb:hover img {
+      transform: scale(1.05);
+    }
+
+    .video-thumb p {
+      margin: 5px 0;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal iframe {
+      width: 80%;
+      max-width: 900px;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: left;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 14px;
+      border-top: 1px solid #444;
+    }
+
+
+
+
+
+
+
+
+
+
+  </style>
+
 </head>
+
 <body>
 
-  <h1>Luffy VS Kaido </h1>
+  <h1 style="
+    text-align: center; 
+    margin: 30px 0; 
+    font-size: 3rem; 
+    font-weight: 900; 
+    background: linear-gradient(90deg, #f0843d, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    font-family: 'Arial Black', Arial, sans-serif;
+    letter-spacing: 2px;
+    ">
+    Les Farouche échange de Luffy <br> 
+     Version Kai-canon / Sans coupure de merde 
+  </h1>
 
-  <div class="video-container">
-    <div class="video-thumb" onclick="ouvrirVideo('videos/lufy-vs-kaido-partie-1.mp4')">
-      <img src="mini/mini1.png" alt="Vidéo 1">
-      <p>▶ Luffy vs Kaido Partie 1</p>
-    </div>
 
-    <div class="video-thumb" onclick="ouvrirVideo('videos/lufy-vs-kaido-partie-2.mp4')">
-      <img src="mini/mini2.png" alt="Vidéo 2">
-      <p>▶ Luffy vs Kaido Partie 2</p>
-    </div>
+  <footer>  
+    <details> 
+
+        <summary><h1>🟩 Arc Pays des Wano : Luffy VS Kaido (  Fini a 50% )  </h1></summary> <br> 
+
+
+        <div class="video-container">
+
+
+          <div class="video-thumb" onclick="ouvrirYoutube('S0tzxN0X718')">
+            <img src="mini/mini1.png" alt="Vidéo 1">
+
+            <p>▶ Partie 1 : Luffy vs Kaido</p>
+            <p>Episode : 1015 à 1018 </p>
+
+          </div>
+
+          <div class="video-thumb" onclick="ouvrirYoutube('jAn2d2Iu2JY')">
+            <img src="mini/mini2.png" alt="Vidéo 2">
+
+            <p>▶ Partie 2 : Luffy vs Kaido</p>
+            <p>Episode 1021 à 1033 </p>
+
+          </div>
+
+    </details>
+  </footer>
+
+  <footer>  
+    <details> 
+
+        <summary><h1>🟥 Arc Whole Cake Island : Luffy VS Katakuri : Pas encore commencer  </h1></summary> <br>
+
+
+          </div>
+
+    </details>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+  <!-- Fenêtre modale YouTube -->
+  <div id="videoModal" class="modal" onclick="fermerVideo()">
+    <span class="close" onclick="fermerVideo()">&times;</span>
+    <iframe id="youtubePlayer" src="" allowfullscreen allow="autoplay"></iframe>
   </div>
 
-  <!-- Fenêtre modale pour lire la vidéo -->
-  <div id="videoModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="fermerVideo()">&times;</span>
-      <video id="lecteur" controls autoplay>
-        <source id="source-video" src="" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo HTML5.
-      </video>
-    </div>
-  </div>
+  <script>
+    function ouvrirYoutube(videoId) {
+      const modal = document.getElementById("videoModal");
+      const player = document.getElementById("youtubePlayer");
+      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      modal.style.display = "flex";
+    }
 
-  <script src="script.js"></script>
+    function fermerVideo() {
+      const modal = document.getElementById("videoModal");
+      const player = document.getElementById("youtubePlayer");
+      player.src = "";
+      modal.style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
