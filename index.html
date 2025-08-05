@@ -6,95 +6,6 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #313030;
-      color: rgb(233, 222, 222);
-      padding: 20px;
-      margin: 0;
-    }
-
-    h1 {
-      margin-left: 20px;
-    }
-
-    .video-container {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-      margin-left: 20px;
-    }
-
-    .video-thumb {
-      width: 300px;
-      cursor: pointer;
-    }
-
-    .video-thumb img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(235, 232, 232, 0.2);
-      transition: transform 0.2s;
-    }
-
-    .video-thumb:hover img {
-      transform: scale(1.05);
-    }
-
-    .video-thumb p {
-      margin: 5px 0;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 99;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal iframe {
-      width: 80%;
-      max-width: 900px;
-      height: 500px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    .close {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-      color: white;
-      font-size: 40px;
-      cursor: pointer;
-    }
-
-
-
-    footer {
-      background-color: #222;
-      color: #ccc;
-      text-align: left;
-      padding: 20px;
-      margin-top: 60px;
-      font-size: 14px;
-      border-top: 1px solid #444;
-    }
-
-
-
-
-
-
-
-
 
 
   </style>
@@ -120,6 +31,28 @@
   </h1>
 
 
+       <footer>
+
+        <details>
+
+          <summary> <h1> Comment avoir accès au films pour les visionner ?  </h1> </summary>
+
+         <br> Etape 1 :<!-- ajouter un profile chrome<br>-->
+         <br> Etape 2 :<!-- conecter vous au compte chrome <br>
+         <br>  // compte google : Luffy <br>
+                // mail : one.piece.projet.007@gmail.com <br>
+                // mots de passe : one-piece-projet-007 <br>
+                //chaine youtube : Luffy-007  <br>-->
+         <br> Etape 3 :<!-- aller sur sur https://totopirate.github.io/one-piece-projet/ ,  avec ce compte google ,  regarder les films -->
+        </details>
+
+      </footer>
+
+
+
+
+
+
   <footer>  
     <details> 
 
@@ -129,7 +62,7 @@
         <div class="video-container">
 
 
-          <div class="video-thumb" onclick="ouvrirYoutube('S0tzxN0X718')">
+          <div class="video-thumb" onclick="ouvrirYoutube('S0tzxN0X718')"> 
             <img src="mini/mini10.png" alt="Vidéo 1">
 
             <p>▶ Partie 1 : Luffy vs Kaido</p>
@@ -137,7 +70,7 @@
 
           </div>
 
-          <div class="video-thumb" onclick="ouvrirYoutube('jAn2d2Iu2JY')">
+          <div class="video-thumb" onclick="ouvrirYoutube('jAn2d2Iu2JY')"> 
             <img src="mini/mini20.png" alt="Vidéo 2">
 
             <p>▶ Partie 2 : Luffy vs Kaido</p>
@@ -145,11 +78,20 @@
 
           </div>
 
-          <div class="video-thumb" onclick="ouvrirYoutube('zl4Wdx9fo80')">
+          <div class="video-thumb" onclick="ouvrirYoutube('zl4Wdx9fo80')"> 
             <img src="mini/mini30.png" alt="Vidéo 3">
 
             <p>▶ Partie 2.5 : Luffy vs Kaido</p>
             <p>Episode 1034 a 1040 </p>
+
+          </div>          
+
+
+            <div class="video-thumb" onclick="ouvrirYoutube('Neiko2OcsEs')"> <!-- https://youtu.be/Neiko2OcsEs -->
+            <img src="mini/mini2.png" alt="Vidéo 3">
+
+            <p>▶ Partie test : Luffy vs Kaido</p>
+            <p>test </p>
 
           </div>          
 
@@ -159,7 +101,7 @@
   <footer>  
     <details> 
 
-        <summary><h1>🟥 Arc Whole Cake Island : Luffy VS Katakuri : Pas encore commencer.  </h1></summary> <br>
+        <summary><h1>🟥 Arc Whole Cake Island : Luffy VS Katakuri : Pas encore commencer  </h1></summary> <br>
 
 
           </div>
@@ -176,7 +118,7 @@
 
 
 
-  <!-- Fenêtre modale YouTube -->
+  <!-- Fenêtre modale YouTube -->  
   <div id="videoModal" class="modal" onclick="fermerVideo()">
     <span class="close" onclick="fermerVideo()">&times;</span>
     <iframe id="youtubePlayer" src="" allowfullscreen allow="autoplay"></iframe>
@@ -200,4 +142,3 @@
 
 </body>
 </html>
-
